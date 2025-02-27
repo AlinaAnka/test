@@ -56,5 +56,18 @@ public class SearchTests {
 
 
     }
+
+
+    @Test
+    void successfulLogout22() {
+        open("https://auth.niffler.qa.guru/login");
+        $("[name=username]").setValue("Alina");
+        $("[name=password]").setValue("5555").pressEnter();
+        $("[id=spendings]").shouldHave(text("History of Spendings"));
+        $("[aria-label=Menu]").click();
+//        $("[role=menu]").$(byText()).click();
+
+
+    }
 }
 
